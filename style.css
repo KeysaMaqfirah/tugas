@@ -1,0 +1,358 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mengaktifkan efek smooth scroll pada halaman HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desain NAVBAR */
+
+/* Gaya untuk logo */
+.logo {
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1pt; /* Mengatur jarak antar huruf sebesar 1 poin */
+  cursor: pointer;
+  float: left;
+}
+
+/* Gaya untuk navbar utama */
+.navbar {
+  display: flex;  /* Menggunakan model tata letak fleksibel untuk menata elemen-elemen secara horizontal */
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+/* Efek gelap pada latar belakang navbar */
+.navbar::before {
+  content: ""; 
+  position: absolute;
+  background-color: black; 
+  height: 100%; 
+  width: 100%; 
+  z-index: -1; /* Menempatkan lapisan di belakang elemen utama menggunakan nilai indeks z */
+}
+
+/* Gaya untuk daftar menu dalam navbar */
+.navbar ul {
+  display: flex;
+  list-style: none;  /* Menghilangkan tanda/bullet dari daftar elemen <ul> */
+}
+
+/* Gaya untuk setiap item menu dalam navbar */
+.navbar ul li {
+  font-size: 1.1rem;
+  margin-right: 2px; /* Menambahkan margin di kanan setiap list item */
+}
+
+/* Gaya untuk tautan menu dalam navbar */
+.navbar ul li a {
+  padding: 5px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Efek hover pada tautan menu dalam navbar */
+.navbar ul li a:hover {
+  border-bottom: 2px solid yellow;
+  transform: scale(1.1);  /* Menerapkan efek scaling pada elemen <a> saat dihover dengan faktor 1.1 */
+}
+
+/* Desain bagian HOME */
+
+/* Gaya untuk bagian HOME */
+#HOME {
+  display: flex; /* Menggunakan model tata letak fleksibel untuk menata elemen-elemen */
+  flex-direction: column; /* Mengatur arah tata letak elemen menjadi kolom */
+  height: 650px; /* Menetapkan tinggi elemen dengan ID "HOME" menjadi 650 piksel */
+  justify-content: center; /* Memusatkan elemen secara vertikal dalam container */
+  align-items: center; /* Memusatkan elemen secara horizontal dalam container */
+  background-color: rgba(0, 0, 0, 0.5); /* Memberikan latar belakang berwarna hitam dengan tingkat transparansi 0.5 */
+  color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Efek latar belakang gambar pada bagian HOME */
+#HOME::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("g2.gif") center;
+  height: 700px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Gaya untuk judul utama pada bagian HOME */
+.heading {
+  color: white;
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  transform: scale(1, 1, 3);
+}
+
+/* Gaya untuk elemen teks pada bagian HOME */
+#HOME h1 {
+  font-size: 3.1rem;
+}
+
+#HOME p {
+  font-size: 1.1rem;
+}
+
+
+
+/* Desain bagian ABOUT */
+
+/* Gaya untuk bagian ABOUT */
+#ABOUT {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  background-image: url("pesawat.gif");
+}
+
+/* Gaya untuk judul utama pada bagian ABOUT */
+#ABOUT h1 {
+  margin: 60px;
+}
+
+/* Gaya untuk grid kolom pada bagian ABOUT */
+.columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 50px;
+}
+
+/* Gaya untuk setiap kotak informasi pada bagian ABOUT */
+.box {
+  height: 300px;
+  width: 500px;
+  background-color: black;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 20px;
+}
+
+/* Gaya untuk judul kotak informasi pada bagian ABOUT */
+.box h2 {
+  color: yellowgreen;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Gaya untuk teks dalam kotak informasi pada bagian ABOUT */
+.box p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+
+
+/* Desain bagian TOUR */
+
+/* Gaya untuk bagian TOUR */
+#TOUR {
+  display: flex;
+  flex-direction: column;
+  background: #000000dc;
+}
+
+/* Gaya untuk judul utama pada bagian TOUR */
+#TOUR h1 {
+  margin: 60px;
+  margin-top: 100px;
+}
+
+/* Gaya untuk galeri gambar pada bagian TOUR */
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Gaya untuk setiap gambar dalam galeri pada bagian TOUR */
+.gallery img {
+  width: 360px;
+  height: 640px;
+  padding: 4px;
+  margin: 1px;
+  transition: transform 0.3 ease;
+}
+
+/* Efek hover pada gambar dalam galeri pada bagian TOUR */
+.gallery img:hover {
+  background-color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Gaya untuk elemen teks pada gambar dalam galeri pada bagian TOUR */
+.foto {
+  position: relative;
+}
+
+.gallery h2 {
+  font-size: 1rem;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1; /* Memastikan teks muncul di atas gambar */
+  font-size: 1.7rem;
+}
+
+.foto p {
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Desain bagian CONTACT */
+
+/* Gaya untuk bagian CONTACT */
+#CONTACT {
+  background-color: #333;
+  padding: 50px 0;
+  background: url("bintang.gif");
+}
+
+/* Gaya untuk judul utama pada bagian CONTACT */
+.heading {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk footer pada bagian CONTACT */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Gaya untuk setiap bagian footer pada bagian CONTACT */
+.footer-section {
+  width: 30%;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #555;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center; /* Menengahkan teks */
+}
+
+/* Efek hover pada setiap bagian footer pada bagian CONTACT */
+.footer-section:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+/* Gaya untuk judul dan teks dalam footer pada bagian CONTACT */
+h3 {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fcfcfc;
+}
+
+p {
+  line-height: 1.5;
+}
+
+/* Gaya untuk ikon media sosial pada bagian CONTACT */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.4s ease;
+}
+
+/* Gaya untuk bagian LOGO pada bagian CONTACT */
+#logo {
+  text-align: center;
+  width: 100%;
+  padding: 50px 0;
+  margin-top: 50px;
+  background-color: #333;
+}
+
+.wp {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.wp b {
+  color: #fcfcfc;
+}
+
+
+/* Desain halaman terimakasih */
+
+/* Gaya untuk halaman terimakasih */
+#THANKS {
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Efek latar belakang gambar pada halaman terimakasih */
+#THANKS::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("api1.gif") center;
+  height: 700px;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+/* Gaya untuk judul utama pada halaman terimakasih */
+.heading {
+  color: white;
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  transform: scale(1, 1, 3);
+}
+
+#THANKS h1 {
+  font-size: 2rem;
+}
+
+#THANKS p {
+  font-size: 1.1rem;
+}
